@@ -1,0 +1,38 @@
+{
+  "name": "prime-calculator",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node ./build/start.js",
+    "api": "node ./build/api.js",
+    "build": "node ./build/build.js"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.1.18",
+    "babelify": "^7.2.0",
+    "browserify": "^12.0.1",
+    "connect": "^3.4.0",
+    "connect-livereload": "^0.5.3",
+    "del": "^2.1.0",
+    "gulp": "^3.9.0",
+    "gulp-live-server": "0.0.29",
+    "gulp-nunjucks-render": "^1.0.0",
+    "gulp-sass": "^2.1.0",
+    "gulp-util": "^3.0.7",
+    "open": "0.0.5",
+    "proxy-middleware": "^0.15.0",
+    "run-sequence": "^1.1.4",
+    "serve-static": "^1.10.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebastianhaeni/prime-calculator.git"
+  },
+  "author": "Sebastian Haeni <haeni.sebastian@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sebastianhaeni/prime-calculator/issues"
+  },
+  "homepage": "https://github.com/sebastianhaeni/prime-calculator#readme"
+}

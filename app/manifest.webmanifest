@@ -1,0 +1,14 @@
+{
+  "name": "Prime calculator",
+  "short_name": "Primes",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#445863",
+  "background_color": "#fff",
+  "description": "Check your favorite number and see if it's a prime number.",
+  "icons": [{
+    "src": "images/homescreen.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }]
+}

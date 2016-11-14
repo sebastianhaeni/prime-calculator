@@ -3,8 +3,10 @@
  */
 const childProcess = require('child_process');
 
+var isWin = /^win/.test(process.platform);
+
 console.log("Running app at http://localhost:3000");
-var child = childProcess.execFile('.\\node_modules\\.bin\\gulp.cmd', ['server'], function(error, stdout, stderr) {
+var child = childProcess.execFile('.\\node_modules\\.bin\\gulp' + isWin ? '.cmd' : '', ['server'], function(error, stdout, stderr) {
     console.log(stdout);
 });
 child.stdout.on('data', function(data) {

@@ -4,3 +4,4 @@
 # Build artifacts
 node_modules/
 www/
+*.log

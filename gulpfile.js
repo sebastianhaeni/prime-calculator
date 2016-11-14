@@ -25,7 +25,6 @@ gulp.task('sass', function () {
 });
 
 gulp.task('nunjucks', function () {
-    nunjucksRender.nunjucks.configure(['app/templates/'], {watch: false});
     return gulp.src('app/pages/**/*.html')
         .pipe(nunjucksRender())
         .on('error', function (error) {

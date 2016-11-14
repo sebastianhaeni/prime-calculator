@@ -1,11 +1,11 @@
-{% extends "layout.html" %}
+{% extends "app/templates/layout.html" %}
 
 {% block content %}
-Check if your number is a prime number:<br>
+Get the n-th prime number:<br>
 
 <form id="check-form">
-    <input type="number" name="prime-number-candidate" required>
-    <input type="submit" value="Check">
+    n: <input type="number" name="prime-number-candidate" value="100000" required>
+    <input type="submit" value="Compute">
 </form>
 
 

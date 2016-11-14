@@ -8,7 +8,8 @@ var isWin = /^win/.test(process.platform);
 var extension = isWin ? '.cmd' : '';
 
 console.log("Running app at http://localhost:3000");
-var child = childProcess.execFile(`.${path.sep}node_modules${path.sep}.bin${path.sep}gulp${extension}`, ['server'], function(error, stdout, stderr) {
+var gulp = `.${path.sep}node_modules${path.sep}.bin${path.sep}gulp${extension}`;
+var child = childProcess.execFile(gulp, ['server'], function(error, stdout, stderr) {
     console.log(stdout);
 });
 child.stdout.on('data', function(data) {

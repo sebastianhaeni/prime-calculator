@@ -2,9 +2,23 @@
 
 $uri = explode('/', $_SERVER['REQUEST_URI']);
 
-$candidate = $uri[count($uri) - 1];
+$count = $uri[count($uri) - 1];
 
-echo json_encode(['result' => isPrime($candidate)]);
+if ($count > 100000) {
+    echo json_encode(['message' => 'sorry, we\'re not that crazy']);
+    return;
+}
+
+$found = 0;
+$current = 2;
+while ($found < $count) {
+    if (isPrime($current)) {
+        $found++;
+    }
+    $current++;
+}
+
+echo json_encode(['result' => $current - 1]);
 
 function isPrime($num)
 {

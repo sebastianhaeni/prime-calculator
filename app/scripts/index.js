@@ -29,7 +29,7 @@ function compute(candidate, index) {
             results.push({n: candidate, number: json.result, i: index, server: json.server});
             render();
         })
-        .catch(() => compute(candidate));
+        .catch(() => compute(candidate, index));
 }
 
 function render() {

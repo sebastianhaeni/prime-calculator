@@ -5,8 +5,9 @@ $('[name=prime-number-candidate]').val(getRandom());
 let i = 0;
 
 $('#check-form').submit(() => {
-    let candidate = $('[name=prime-number-candidate]').val();
-    $('[name=prime-number-candidate]').val(getRandom());
+    let input = $('[name=prime-number-candidate]');
+    let candidate = input.val();
+    input.val(getRandom());
     if (!candidate) {
         alert('Please insert a number, com\'on.');
         return;
@@ -15,17 +16,21 @@ $('#check-form').submit(() => {
     results.push({n: candidate, number: 'computing...', i: ++i});
     let index = i;
     render();
+    compute(candidate, index);
 
+    return false;
+});
+
+function compute(candidate, index) {
     fetch(config.API + candidate)
         .then(response => response.json())
         .then(json => {
             results = results.filter(result => result.n != candidate);
             results.push({n: candidate, number: json.result, i: index, server: json.server});
             render();
-        });
-
-    return false;
-});
+        })
+        .catch(() => compute(candidate));
+}
 
 function render() {
     $('#result').html('');

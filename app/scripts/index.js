@@ -20,7 +20,7 @@ $('#check-form').submit(() => {
         .then(response => response.json())
         .then(json => {
             results = results.filter(result => result.n != candidate);
-            results.push({n: candidate, number: json.result, i: index});
+            results.push({n: candidate, number: json.result, i: index, server: json.server});
             render();
         });
 
@@ -32,7 +32,11 @@ function render() {
     results.sort((a, b) => a.i - b.i);
     let max = Math.max.apply(null, results.map(result => result.i));
     results.filter(result => result.i > max - 10).forEach(result => {
-        $('#result').append(`<span class="nth">Prime ${result.n}:</span><span class="number">${result.number}</span><br>`);
+        let str = `<span class="nth">Prime ${result.n}:</span>`;
+        str += `<span class="number">${result.number}</span>`;
+        str += `<span class="server">${result.server || ''}</span>`;
+        str += `<br>`;
+        $('#result').append(str);
     });
 }
 

@@ -55,6 +55,14 @@ input[type=submit] {
   text-align: right;
 }
 
+.server {
+  display: inline-block;
+  padding-left: 10px;
+  font-size: .5em;
+  color: #D3D5D7;
+  width: 100px
+}
+
 form {
   display: flex;
   justify-content: center;

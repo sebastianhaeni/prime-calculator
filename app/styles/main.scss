@@ -1,9 +1,2 @@
 @import "prime-calculator/_normalize";
-
-html {
-  font-family: 'Roboto', sans-serif;
-}
-
-.container-fluid {
-  margin: 0 auto;
-}
+@import "prime-calculator/_scaffolding";

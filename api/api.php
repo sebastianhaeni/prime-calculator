@@ -18,7 +18,7 @@ while ($found < $count) {
     $current++;
 }
 
-echo json_encode(['result' => $current - 1]);
+echo json_encode(['result' => $current - 1, 'server' => gethostname()]);
 
 function isPrime($num)
 {

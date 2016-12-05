@@ -34,5 +34,8 @@
   "bugs": {
     "url": "https://github.com/sebastianhaeni/prime-calculator/issues"
   },
-  "homepage": "https://github.com/sebastianhaeni/prime-calculator#readme"
+  "homepage": "https://github.com/sebastianhaeni/prime-calculator#readme",
+  "dependencies": {
+    "whatwg-fetch": "^2.0.1"
+  }
 }
